@@ -23,3 +23,7 @@ path = "examples/2d/simple_sprite.rs"
 [[example]]
 name = "window_size_simple"
 path = "examples/window/window_size_simple.rs"
+
+[[example]]
+name = "japanese_font"
+path = "examples/text/japanese_font.rs"
