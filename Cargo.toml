@@ -1,0 +1,17 @@
+[package]
+name = "bevy_hello"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bevy = { version = "0.12.1" }
+
+[[example]]
+name = "blank"
+path = "examples/basic/blank.rs"
+
+[[example]]
+name = "simple_sprite"
+path = "examples/2d/simple_sprite.rs"
