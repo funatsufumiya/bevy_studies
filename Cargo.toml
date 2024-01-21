@@ -31,3 +31,7 @@ path = "examples/text/japanese_font.rs"
 [[example]]
 name = "upper_lower"
 path = "examples/layout/upper_lower.rs"
+
+[[example]]
+name = "mouse_tracking"
+path = "examples/input/mouse_tracking.rs"
