@@ -27,3 +27,7 @@ path = "examples/window/window_size_simple.rs"
 [[example]]
 name = "japanese_font"
 path = "examples/text/japanese_font.rs"
+
+[[example]]
+name = "upper_lower"
+path = "examples/layout/upper_lower.rs"
