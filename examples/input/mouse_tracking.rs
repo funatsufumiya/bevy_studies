@@ -48,7 +48,7 @@ fn mouse_tracking(
     let mut transform = transforms.single_mut().0;
 
     // for event in mouse_button_input_events.read() {
-    //     // info!("{:?}", event);
+    //     info!("{:?}", event);
     // }
 
     // for event in mouse_wheel_events.read() {
@@ -57,8 +57,6 @@ fn mouse_tracking(
 
     for event in cursor_moved_events.read() {
         // info!("{:?}", event);
-        // let z = transform.translation.z;
-        // transform.transform_point( event.position );
         transform.translation.x = event.position.x - window.width() / 2.;
         transform.translation.y = -event.position.y + window.height() / 2.;
     }
