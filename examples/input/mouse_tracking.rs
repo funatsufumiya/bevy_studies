@@ -38,13 +38,9 @@ fn mouse_tracking(
     // mut mouse_button_input_events: EventReader<MouseButtonInput>,
     // mut mouse_wheel_events: EventReader<MouseWheel>,
     mut transforms: Query<(&mut Transform, &MouseTrackingSprite)>,
-    // sprites: Query<&Children, With<MouseTrackingSprite>>,
-    // mut materials: ResMut<Assets<ColorMaterial>>,
-    // mut materials_query : Query<&mut Handle<ColorMaterial>>,
     windows: Query<&mut Window>,
 ) {
     let window = windows.single();
-
     let mut transform = transforms.single_mut().0;
 
     // for event in mouse_button_input_events.read() {
