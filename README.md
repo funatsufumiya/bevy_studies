@@ -14,4 +14,5 @@ $ cargo run --example <example_name>
 
 ## License
 
-CC0 (also see the [license of the bevy engine, I choose MIT.](https://github.com/bevyengine/bevy/blob/main/LICENSE-MIT))
+- my code: [CC0 v1.0](LICENSE)
+- bevy engine: [MIT](https://github.com/bevyengine/bevy/blob/main/LICENSE-MIT)
