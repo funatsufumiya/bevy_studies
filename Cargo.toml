@@ -13,6 +13,10 @@ name = "blank"
 path = "examples/basic/blank.rs"
 
 [[example]]
+name = "hello_world"
+path = "examples/basic/hello_world.rs"
+
+[[example]]
 name = "simple_sprite"
 path = "examples/2d/simple_sprite.rs"
 
