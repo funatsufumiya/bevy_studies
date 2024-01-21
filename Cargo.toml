@@ -15,3 +15,7 @@ path = "examples/basic/blank.rs"
 [[example]]
 name = "simple_sprite"
 path = "examples/2d/simple_sprite.rs"
+
+[[example]]
+name = "window_size_simple"
+path = "examples/window/window_size_simple.rs"
