@@ -21,6 +21,10 @@ name = "sprite_simple"
 path = "examples/2d/sprite_simple.rs"
 
 [[example]]
+name = "3d_mesh_with_2d_sprite"
+path = "examples/3d/3d_mesh_with_2d_sprite.rs"
+
+[[example]]
 name = "window_size_simple"
 path = "examples/window/window_size_simple.rs"
 
