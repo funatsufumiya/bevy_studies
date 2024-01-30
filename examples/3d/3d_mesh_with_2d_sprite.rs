@@ -62,22 +62,6 @@ fn setup(
         ..default()
     });
 
-    // FIXME: currently below 2 cameras shows warning:
-    // (related forum post: https://www.reddit.com/r/bevy/comments/y8mtpw/2d_and_3d_at_the_same_time/)
-    //
-    // WARN bevy_render::camera::camera:
-    //  Camera order ambiguities detected for active cameras
-    //  with the following priorities:
-    //  {(0, Some(Window(NormalizedWindowRef(0v0))))}. 
-    //  To fix this, ensure there is exactly one Camera entity
-    //  spawned with a given order for a given RenderTarget.
-    //  Ambiguities should be resolved because either
-    //  (1) multiple active cameras were spawned accidentally,
-    //    which will result in rendering multiple instances
-    //    of the scene or
-    //  (2) for cases where multiple active cameras is intentional,
-    //    ambiguities could result in unpredictable render results.
-
     commands.spawn(Camera3dBundle {
         transform: Transform::from_xyz(0.0, 6., 12.0).looking_at(Vec3::new(0., 1., 0.), Vec3::Y),
         camera: Camera {
@@ -93,9 +77,13 @@ fn setup(
             clear_color: ClearColorConfig::None,
             ..default()
         },
+        camera: Camera {
+            order: 1,
+            ..default()
+        },
         ..default()
     });
-    
+
     commands.spawn(SpriteBundle {
         sprite: Sprite {
             color: Color::rgb(0.25, 0.25, 0.75),
