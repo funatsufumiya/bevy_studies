@@ -29,6 +29,10 @@ name = "texture_from_bytes"
 path = "examples/2d/texture_from_bytes.rs"
 
 [[example]]
+name = "texture_from_bytes_with_time"
+path = "examples/2d/texture_from_bytes_with_time.rs"
+
+[[example]]
 name = "3d_meshes"
 path = "examples/3d/3d_meshes.rs"
 
