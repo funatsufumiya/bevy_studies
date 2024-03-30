@@ -21,6 +21,10 @@ name = "sprite_simple"
 path = "examples/2d/sprite_simple.rs"
 
 [[example]]
+name = "texture"
+path = "examples/2d/texture.rs"
+
+[[example]]
 name = "3d_meshes"
 path = "examples/3d/3d_meshes.rs"
 
