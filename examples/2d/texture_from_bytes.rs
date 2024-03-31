@@ -1,4 +1,4 @@
-use bevy::{prelude::*, render::render_resource::{Extent3d, TextureDimension, TextureFormat}};
+use bevy::{prelude::*, render::{render_resource::{Extent3d, TextureDimension, TextureFormat}}};
 
 fn main() {
     App::new()
@@ -40,9 +40,9 @@ fn setup(
             depth_or_array_layers: 1,
         },
         TextureDimension::D2,
-        // vec![255; (width * height * 4) as usize],
         image_data,
         TextureFormat::Rgba8UnormSrgb,
+        // RenderAssetUsages::RENDER_WORLD, // for bevy 0.13.1
     );
 
     let image_handle = images.add(image);
@@ -53,7 +53,6 @@ fn setup(
             custom_size: Some(Vec2::new(300.0, 300.0)),
             ..default()
         },
-        // texture: asset_server.load("images/bevy_logo.png"),
         texture: image_handle,
         ..default()
     });
