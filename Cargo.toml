@@ -7,6 +7,7 @@ edition = "2021"
 
 [dependencies]
 bevy = { version = "0.12.1" }
+bevy_egui = { version = "0.24.0" }
 
 [[example]]
 name = "blank"
@@ -57,5 +58,17 @@ name = "mouse_tracking"
 path = "examples/input/mouse_tracking.rs"
 
 [[example]]
+name = "keyboard_input"
+path = "examples/input/keyboard_input.rs"
+
+[[example]]
 name = "change_material_on_click"
 path = "examples/material/change_material_on_click.rs"
+
+[[example]]
+name = "egui_hello"
+path = "examples/egui/egui_hello.rs"
+
+[[example]]
+name = "egui_value_change"
+path = "examples/egui/egui_value_change.rs"
