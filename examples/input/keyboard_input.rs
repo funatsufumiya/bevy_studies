@@ -58,6 +58,20 @@ fn key_handler(
         println!("F key pressed");
         let mut w = window.single_mut();
         const fs: WindowMode = WindowMode::BorderlessFullscreen;
+        // const fs: WindowMode = WindowMode::SizedFullscreen;
+        // toggle fullscreen
+        if w.mode != fs {
+            w.mode = fs
+        } else {
+            w.mode = WindowMode::Windowed;
+        }
+        
+    }
+    if keyboard_input.just_pressed(KeyCode::S) {
+        println!("S key pressed");
+        let mut w = window.single_mut();
+        const fs: WindowMode = WindowMode::BorderlessFullscreen;
+        // const fs: WindowMode = WindowMode::SizedFullscreen;
         // toggle fullscreen
         if w.mode != fs {
             w.mode = fs
