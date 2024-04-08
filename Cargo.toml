@@ -72,3 +72,7 @@ path = "examples/egui/egui_hello.rs"
 [[example]]
 name = "egui_value_change"
 path = "examples/egui/egui_value_change.rs"
+
+[[example]]
+name = "gizmos_test"
+path = "examples/gizmos/gizmos_test.rs"
