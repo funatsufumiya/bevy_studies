@@ -50,6 +50,10 @@ name = "fullscreen"
 path = "examples/window/fullscreen.rs"
 
 [[example]]
+name = "multi_fullscreen"
+path = "examples/window/multi_fullscreen.rs"
+
+[[example]]
 name = "japanese_font"
 path = "examples/text/japanese_font.rs"
 
