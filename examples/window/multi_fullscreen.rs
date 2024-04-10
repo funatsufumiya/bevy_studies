@@ -21,13 +21,13 @@ fn main() {
                 primary_window: Some(Window {
                     title: "fullscreen test".to_string(),
 //                    mode: FULLSCREEN_MODE, // set initial window mode here
-					present_mode: PresentMode::AutoNoVsync,
-					position: WindowPosition::At(IVec2::new(0, 0)),
-					resolution: WindowResolution::new(WIDTH, HEIGHT),
-					resizable: false,
-					decorations: false,
-					window_level: WindowLevel::AlwaysOnTop,
-					cursor: Cursor{visible:false,..default()},
+                    present_mode: PresentMode::AutoNoVsync,
+                    position: WindowPosition::At(IVec2::new(0, 0)),
+                    resolution: WindowResolution::new(WIDTH, HEIGHT),
+                    resizable: false,
+                    decorations: false,
+                    window_level: WindowLevel::AlwaysOnTop,
+                    cursor: Cursor{visible:false,..default()},
 					
                     ..default()
                 }),
