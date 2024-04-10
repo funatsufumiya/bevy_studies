@@ -24,9 +24,6 @@ fn main() {
         .run();
 }
 
-#[derive(Component)]
-struct MouseTrackingSprite;
-
 fn setup(
     mut commands: Commands,
     // mut meshes: ResMut<Assets<Mesh>>,
