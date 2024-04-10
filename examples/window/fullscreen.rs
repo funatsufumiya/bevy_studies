@@ -2,6 +2,8 @@ use bevy::prelude::*;
 use bevy::window::WindowMode;
 
 const FULLSCREEN_MODE : WindowMode = WindowMode::BorderlessFullscreen;
+// const FULLSCREEN_MODE : WindowMode = WindowMode::Fullscreen;
+// const FULLSCREEN_MODE : WindowMode = WindowMode::SizedFullscreen;
 
 fn main() {
     App::new()
