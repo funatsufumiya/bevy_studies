@@ -51,7 +51,7 @@ fn setup(
         TextureDimension::D2,
         image_data,
         TextureFormat::Rgba8UnormSrgb,
-        // RenderAssetUsages::RENDER_WORLD, // for bevy 0.13.1
+        // RenderAssetUsages::MAIN_WORLD | RenderAssetUsages::RENDER_WORLD // for bevy 0.13
     );
 
     image_handle.handle = Some(images.add(image));
