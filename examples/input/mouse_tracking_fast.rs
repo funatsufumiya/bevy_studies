@@ -14,6 +14,9 @@ fn main() {
             DefaultPlugins.set(WindowPlugin {
                 primary_window: Some(Window {
                     mode: WindowMode::BorderlessFullscreen,
+                    // present_mode: bevy::window::PresentMode::Mailbox,
+                    // present_mode: bevy::window::PresentMode::Immediate,
+                    // present_mode: bevy::window::PresentMode::Fifo,
                     // present_mode: bevy::window::PresentMode::AutoNoVsync,
                     ..default()
                 }),
@@ -22,7 +25,7 @@ fn main() {
         )
         .add_systems(Startup, setup)
         .add_systems(PreUpdate, mouse_tracking_a)
-        .add_systems(FixedUpdate, mouse_tracking_b)
+        .add_systems(PreUpdate, mouse_tracking_b)
         .add_systems(Update, bevy::window::close_on_esc)
         .run();
 }
