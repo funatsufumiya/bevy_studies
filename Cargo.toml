@@ -66,6 +66,10 @@ name = "mouse_tracking"
 path = "examples/input/mouse_tracking.rs"
 
 [[example]]
+name = "mouse_tracking_alt"
+path = "examples/input/mouse_tracking_alt.rs"
+
+[[example]]
 name = "mouse_tracking_vsync_off"
 path = "examples/input/mouse_tracking_vsync_off.rs"
 
