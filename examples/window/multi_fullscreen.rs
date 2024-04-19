@@ -68,7 +68,7 @@ fn setup(
                     color: Color::WHITE,
                     ..default()
                 })
-                .with_text_alignment(TextAlignment::Center)
+                .with_text_justify(JustifyText::Center)
                 .with_style(Style {
                     ..default()
                 })
@@ -94,7 +94,7 @@ fn setup(
                     color: Color::WHITE,
                     ..default()
                 })
-                .with_text_alignment(TextAlignment::Center)
+                .with_text_justify(JustifyText::Center)
                 .with_style(Style {
                     ..default()
                 })
@@ -103,8 +103,7 @@ fn setup(
 }
 
 fn key_handler(
-    keyboard_input: Res<Input<KeyCode>>,
-    // keyboard_input: Res<ButtonInput<KeyCode>>, // for bevy 0.13
+    keyboard_input: Res<ButtonInput<KeyCode>>,
     mut window: Query<&mut Window>,
 ) {
     // if keyboard_input.just_pressed(KeyCode::F) {

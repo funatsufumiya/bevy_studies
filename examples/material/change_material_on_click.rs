@@ -36,7 +36,7 @@ fn setup(
     
     // Circle
     commands.spawn((MaterialMesh2dBundle {
-        mesh: meshes.add(shape::Circle::new(50.).into()).into(),
+        mesh: meshes.add(Circle::new(50.)).into(),
         material: my_material.material.clone().unwrap(),
         transform: Transform::from_translation(Vec3::new(0., 0., 0.)),
         ..default()

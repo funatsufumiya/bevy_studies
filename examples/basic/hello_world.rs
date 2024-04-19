@@ -36,7 +36,7 @@ fn setup_ui(
                     color: Color::WHITE,
                     ..default()
                 })
-                .with_text_alignment(TextAlignment::Center)
+                .with_text_justify(JustifyText::Center)
                 .with_style(Style {
                     ..default()
                 })

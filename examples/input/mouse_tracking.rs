@@ -25,7 +25,7 @@ fn setup(
     
     // Circle
     commands.spawn((MaterialMesh2dBundle {
-        mesh: meshes.add(shape::Circle::new(50.).into()).into(),
+        mesh: meshes.add(Circle::new(50.)).into(),
         material: materials.add(ColorMaterial::from(Color::YELLOW)),
         transform: Transform::from_translation(Vec3::new(0., 0., 0.)),
         ..default()

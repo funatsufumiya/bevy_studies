@@ -49,7 +49,7 @@ fn setup_ui(
                         color: Color::WHITE,
                         ..default()
                     })
-                    .with_text_alignment(TextAlignment::Center)
+                    .with_text_justify(JustifyText::Center)
                     .with_style(Style {
                         flex_direction: FlexDirection::Column,
                         justify_content: JustifyContent::Center,
@@ -80,7 +80,7 @@ fn setup_ui(
                         color: Color::WHITE,
                         ..default()
                     })
-                    .with_text_alignment(TextAlignment::Center)
+                    .with_text_justify(JustifyText::Center)
                     .with_style(Style {
                         flex_direction: FlexDirection::Column,
                         justify_content: JustifyContent::Center,

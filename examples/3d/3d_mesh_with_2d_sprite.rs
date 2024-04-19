@@ -1,5 +1,4 @@
 use bevy::prelude::*;
-use bevy::core_pipeline::clear_color::ClearColorConfig;
 
 use std::f32::consts::PI;
 
@@ -27,9 +26,9 @@ fn setup(
     });
 
     let shapes = [
-        meshes.add(shape::Torus::default().into()),
-        meshes.add(shape::Box::default().into()),
-        meshes.add(shape::Cylinder::default().into()),
+        meshes.add(Torus::default()),
+        meshes.add(shape::Box::default()),
+        meshes.add(Cylinder::default()),
     ];
 
     let num_shapes = shapes.len();
@@ -74,7 +73,6 @@ fn setup(
     commands.spawn(Camera2dBundle {
         camera_2d: Camera2d {
             // renders after / on top of the main camera
-            clear_color: ClearColorConfig::None,
             ..default()
         },
         camera: Camera {

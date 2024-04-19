@@ -48,7 +48,7 @@ fn setup(
     
     // Circle A
     commands.spawn((MaterialMesh2dBundle {
-        mesh: meshes.add(shape::Circle::new(50.).into()).into(),
+        mesh: meshes.add(Circle::new(50.)).into(),
         material: materials.add(ColorMaterial::from(Color::rgba(1., 1., 0., 0.5))),
         transform: Transform::from_translation(Vec3::new(0., 0., 0.)),
         ..default()
@@ -56,7 +56,7 @@ fn setup(
 
     // Circle B
     commands.spawn((MaterialMesh2dBundle {
-        mesh: meshes.add(shape::Circle::new(30.).into()).into(),
+        mesh: meshes.add(Circle::new(30.)).into(),
         material: materials.add(ColorMaterial::from(Color::rgba(1., 0., 0., 0.5))),
         transform: Transform::from_translation(Vec3::new(0., 0., 0.1)),
         ..default()

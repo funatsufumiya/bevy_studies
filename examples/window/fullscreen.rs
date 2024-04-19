@@ -52,7 +52,7 @@ fn setup(
                     color: Color::WHITE,
                     ..default()
                 })
-                .with_text_alignment(TextAlignment::Center)
+                .with_text_justify(JustifyText::Center)
                 .with_style(Style {
                     ..default()
                 })
@@ -65,7 +65,7 @@ fn setup(
                     color: Color::WHITE,
                     ..default()
                 })
-                .with_text_alignment(TextAlignment::Center)
+                .with_text_justify(JustifyText::Center)
                 .with_style(Style {
                     ..default()
                 })
@@ -78,7 +78,7 @@ fn setup(
                     color: Color::WHITE,
                     ..default()
                 })
-                .with_text_alignment(TextAlignment::Center)
+                .with_text_justify(JustifyText::Center)
                 .with_style(Style {
                     ..default()
                 })
@@ -87,11 +87,11 @@ fn setup(
 }
 
 fn key_handler(
-    keyboard_input: Res<Input<KeyCode>>,
+    keyboard_input: Res<ButtonInput<KeyCode>>,
     // keyboard_input: Res<ButtonInput<KeyCode>>, // for bevy 0.13
     mut window: Query<&mut Window>,
 ) {
-    if keyboard_input.just_pressed(KeyCode::F) {
+    if keyboard_input.just_pressed(KeyCode::KeyF) {
     // if keyboard_input.just_pressed(KeyCode::KeyF) { // for bevy 0.13
         println!("F key pressed");
         let mut w = window.single_mut();

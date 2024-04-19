@@ -25,9 +25,9 @@ fn setup(
     });
 
     let shapes = [
-        meshes.add(shape::Torus::default().into()),
-        meshes.add(shape::Box::default().into()),
-        meshes.add(shape::Cylinder::default().into()),
+        meshes.add(Torus::default()),
+        meshes.add(shape::Box::default()),
+        meshes.add(Cylinder::default()),
     ];
 
     let num_shapes = shapes.len();

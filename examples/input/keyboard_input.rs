@@ -39,22 +39,22 @@ fn setup(
 }
 
 fn key_handler(
-    keyboard_input: Res<Input<KeyCode>>,
+    keyboard_input: Res<ButtonInput<KeyCode>>,
     mut window: Query<&mut Window>,
 ) {
     if keyboard_input.just_pressed(KeyCode::Space) {
         println!("Space key pressed");
     }
-    if keyboard_input.just_pressed(KeyCode::Return) {
+    if keyboard_input.just_pressed(KeyCode::Enter) {
         println!("Return key pressed");
     }
-    if keyboard_input.just_pressed(KeyCode::Right) {
+    if keyboard_input.just_pressed(KeyCode::ArrowRight) {
         println!("Right key pressed");
     }
-    if keyboard_input.just_pressed(KeyCode::Left) {
+    if keyboard_input.just_pressed(KeyCode::ArrowLeft) {
         println!("Left key pressed");
     }
-    if keyboard_input.just_pressed(KeyCode::F) {
+    if keyboard_input.just_pressed(KeyCode::KeyF) {
         println!("F key pressed");
         let mut w = window.single_mut();
         const fs: WindowMode = WindowMode::BorderlessFullscreen;
@@ -67,7 +67,7 @@ fn key_handler(
         }
         
     }
-    if keyboard_input.just_pressed(KeyCode::S) {
+    if keyboard_input.just_pressed(KeyCode::KeyS) {
         println!("S key pressed");
         let mut w = window.single_mut();
         const fs: WindowMode = WindowMode::BorderlessFullscreen;

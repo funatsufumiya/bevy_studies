@@ -1,4 +1,4 @@
-use bevy::{prelude::*, render::{render_resource::{Extent3d, TextureDimension, TextureFormat}}};
+use bevy::{prelude::*, render::{render_asset::RenderAssetUsages, render_resource::{Extent3d, TextureDimension, TextureFormat}}};
 
 fn main() {
     App::new()
@@ -51,7 +51,7 @@ fn setup(
         TextureDimension::D2,
         image_data,
         TextureFormat::Rgba8UnormSrgb,
-        // RenderAssetUsages::MAIN_WORLD | RenderAssetUsages::RENDER_WORLD // for bevy 0.13
+        RenderAssetUsages::MAIN_WORLD | RenderAssetUsages::RENDER_WORLD // for bevy 0.13
     );
 
     image_handle.handle = Some(images.add(image));
