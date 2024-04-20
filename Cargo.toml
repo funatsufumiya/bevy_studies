@@ -93,6 +93,10 @@ name = "keyboard_input"
 path = "examples/input/keyboard_input.rs"
 
 [[example]]
+name = "numpad"
+path = "examples/input/numpad.rs"
+
+[[example]]
 name = "change_material_on_click"
 path = "examples/material/change_material_on_click.rs"
 
