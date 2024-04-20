@@ -8,9 +8,6 @@ use bevy::{
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
-        .insert_resource(MyMaterial {
-            material: None,
-        })
         .add_systems(Startup, setup)
         .add_systems(Update, mouse_tracking)
         .run();
@@ -19,25 +16,19 @@ fn main() {
 #[derive(Component)]
 struct MouseTrackingSprite;
 
-#[derive(Resource)]
-struct MyMaterial {
-    material: Option<Handle<ColorMaterial>>,
-}
-
 fn setup(
     mut commands: Commands,
     mut meshes: ResMut<Assets<Mesh>>,
     mut materials: ResMut<Assets<ColorMaterial>>,
-    mut my_material: ResMut<MyMaterial>,
 ) {
     commands.spawn(Camera2dBundle::default());
 
-    my_material.material = Some(materials.add(ColorMaterial::from(Color::YELLOW)));
+    let mat = materials.add(ColorMaterial::from(Color::YELLOW));
     
     // Circle
     commands.spawn((MaterialMesh2dBundle {
         mesh: meshes.add(Circle::new(50.)).into(),
-        material: my_material.material.clone().unwrap(),
+        material: mat.clone(),
         transform: Transform::from_translation(Vec3::new(0., 0., 0.)),
         ..default()
     }, MouseTrackingSprite));
@@ -49,9 +40,9 @@ fn mouse_tracking(
     mut mouse_button_input_events: EventReader<MouseButtonInput>,
     // mut mouse_wheel_events: EventReader<MouseWheel>,
     mut transforms: Query<(&mut Transform, &MouseTrackingSprite)>,
+    mat_query: Query<(&Handle<ColorMaterial>, &MouseTrackingSprite)>,
     mut materials: ResMut<Assets<ColorMaterial>>,
     windows: Query<&mut Window>,
-    my_material: ResMut<MyMaterial>,
 ) {
     let window = windows.single();
 
@@ -59,7 +50,7 @@ fn mouse_tracking(
 
     for event in mouse_button_input_events.read() {
         // info!("{:?}", event);
-        let mat = materials.get_mut(my_material.material.as_ref().unwrap()).unwrap();
+        let mat = materials.get_mut(mat_query.single().0).unwrap();
 
         if event.button == MouseButton::Left {
             if event.state == ButtonState::Pressed {
